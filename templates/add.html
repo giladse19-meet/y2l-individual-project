@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Brainstorm!</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='design.css')}}">
+        <!--BOOTSTRAP CSS import-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    </head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-light bg-light">
+      <img class="rounded" width="50" height="50" src="{{url_for('static', filename='images/brain.jpg')}}">
+      <a class="nav-link" href="/brainstorm">Start brainstorming!</a>
+      <a class="nav-link" href="#">Sing in</a>
+      <a class="nav-link" href="#">Browse</a>
+    </nav>
+    <!--Navbar End-->   
+
+    <h1>Add an Idea</h1>
+
+    <form action='/add' method='POST'>
+        <input type='text' name='yourname' placeholder="your name">
+        <br>
+        <input type='text' name='content' placeholder="your idea">
+        <br>
+        <input type='text' name='links' placeholder="links">
+        <br>
+        <h3>Idea position</h3>
+        <input type='text' name='posx' placeholder="x">
+        <input type='text' name='posy' placeholder="y">
+        <br>
+        <input type='submit' value="submit">
+    </form>
+
+    <!--BOOTSTRAP Javascript import-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

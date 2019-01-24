@@ -5,6 +5,11 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
-# Write your classes here :
-class Product(Base):
-    pass
+class Idea(Base):
+    __tablename__ = "ideas"
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    content = Column(String)
+    links = Column(String)
+    posx = Column(Integer)
+    posy = Column(Integer)
